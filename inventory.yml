@@ -1,10 +1,40 @@
 all:
-
   hosts:
   children:
     sentry:
       hosts:
-       :
-    validator:
-      hosts:
-        :
+        kynode-matic-01:
+          ansible_host: 18.139.201.230
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_become: True
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_ssh_private_key_file: ~/.ssh/princeOfMacedon.pem
+        kynode-matic-02:
+          ansible_host: 54.254.105.218
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_become: True
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_ssh_private_key_file: ~/.ssh/princeOfMacedon.pem
+        kynode-matic-archive-01:
+          ansible_host: 54.254.201.170
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_become: True
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_ssh_private_key_file: ~/.ssh/princeOfMacedon.pem
+        kynode-matic-hpc-01:
+          ansible_host: 54.254.107.55
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_become: True
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_ssh_private_key_file: ~/.ssh/princeOfMacedon.pem
+        kynode-matic-hpc-02:
+          ansible_host: 52.220.12.245
+          ansible_port: 22
+          ansible_user: ubuntu
+          ansible_become: True
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_ssh_private_key_file: ~/.ssh/princeOfMacedon.pem
